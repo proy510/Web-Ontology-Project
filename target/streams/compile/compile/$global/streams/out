@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mD:\owlproject\owlproject\app\controllers\HomeController.java:210:1: ')' expected[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Transaction is refund:"transaction.hasOntClass(refundTransaction));[0m
+[0m[[0m[31merror[0m] [0m[0mD:\owlproject\owlproject\app\controllers\HomeController.java:210:1: ';' expected[0m
+[0m[[0m[31merror[0m] [0m[0m            System.out.println("Transaction is refund:"transaction.hasOntClass(refundTransaction));[0m

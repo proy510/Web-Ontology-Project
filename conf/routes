@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#This should reload the ontology
+#Need to change this later.
+POST    /reset                          controllers.HomeController.reset
+
+#Create a Merchant Individual
+POST  /addmerchant/:uniqueID           controllers.HomeController.addMerchant(uniqueID:String)
+
+#Create a Consumer Individual
+POST  /addconsumer/:uniqueID           controllers.HomeController.addConsumer(uniqueID:String)
+
+#Create a Transaction Individual
+POST /addtransaction/:senderID/:receiverID/:transactionID           controllers.HomeController.addTransaction(senderID:String,receiverID:String,transactionID:String)
+
+#Detects whether a transaction is Commercial
+GET        /iscommercial/:transactionID      controllers.HomeController.isCommercial(transactionID:String)
+
+#Detects whether a transaction is Personal
+GET        /ispersonal/:transactionID      controllers.HomeController.isPersonal(transactionID:String)
+
+#Detects whether a transaction is Purchase
+GET        /ispurchase/:transactionID      controllers.HomeController.isPurchase(transactionID:String)
+
+#Detects whether a transaction is Purchase
+GET        /isrefund/:transactionID      controllers.HomeController.isRefund(transactionID:String)
+
+#Detects whether a Merchant is Trusted
+GET        /istrusted/:merchantID      controllers.HomeController.isTrusted(merchantID:String)
+
